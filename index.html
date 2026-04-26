@@ -164,12 +164,18 @@
 
     /* ── MÉDICOS ── */
     .medicos { background: var(--white); }
+    .medicos .container { max-width: 1160px; }
 
     .medicos-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 2.5rem; border: none;
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+      align-items: flex-start;
+      width: 100%;
     }
     .medico-card {
+      flex: 1 1 0;
+      min-width: 0;
       padding: 0;
       transition: box-shadow 0.3s;
       border: 1px solid var(--gray-200);
@@ -389,8 +395,8 @@
       .hero-right { display: none; }
       .container { padding: 0 1.5rem; }
       section { padding: 5rem 0; }
-      .medicos-grid { grid-template-columns: 1fr; }
-      .medico-card { border-right: none; border-bottom: 1px solid var(--gray-200); }
+      .medicos-grid { flex-direction: column; }
+      .medico-card { width: 100%; }
       .espec-grid { grid-template-columns: 1fr; }
       .loc-grid { grid-template-columns: 1fr; }
       .loc-info { border-right: none; border-bottom: 1px solid var(--gray-200); }
@@ -442,13 +448,13 @@
     <div class="container">
       <p class="section-eyebrow">Quem somos</p>
       <h2 class="section-title">Conheça os <em>especialistas</em></h2>
-      <div class="medicos-grid">
+      <div style="display:flex; flex-direction:row; gap:2rem; align-items:stretch; width:100%;">
 
 ```
     <!-- FELIPE -->
-    <div class="medico-card">
+    <div style="flex:1; min-width:0; border:1px solid #e8e8e8; display:flex; flex-direction:column;">
       <div class="medico-photo"><p>Foto Dr. Felipe</p></div>
-      <div class="medico-body">
+      <div class="medico-body" style="flex:1;">
       <p class="medico-nome">Dr. Felipe Mota Soares</p>
       <p class="medico-subtitulo">Dermatologista · MSc</p>
       <p class="medico-crm">CRM-SP 167.511</p>
@@ -497,10 +503,10 @@
       </div>
     </div>
 
-    <!-- MATEUS -->
-    <div class="medico-card">
+    <!-- MATHEUS -->
+    <div style="flex:1; min-width:0; border:1px solid #e8e8e8; display:flex; flex-direction:column;">
       <div class="medico-photo"><p>Foto Dr. Matheus</p></div>
-      <div class="medico-body">
+      <div class="medico-body" style="flex:1;">
       <p class="medico-nome">Dr. Matheus Mota Soares</p>
       <p class="medico-subtitulo">Dermatologista · MSc</p>
       <p class="medico-crm">CRM-SP 188.343</p>
@@ -548,6 +554,8 @@
       </a>
       </div>
     </div>
+
+  </div><!-- end medicos-grid -->
 </div>
 ```
 
