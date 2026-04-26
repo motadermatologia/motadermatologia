@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"/>
@@ -50,42 +51,43 @@
     }
     .nav-logo {
       font-family: var(--sans);
-      font-size: 0.68rem; font-weight: 500;
+      font-size: 0.85rem; font-weight: 500;
       letter-spacing: 0.16em; text-transform: uppercase;
       color: var(--gray-900); text-decoration: none;
     }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 400;
-      letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.85rem; font-weight: 400;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--gray-500); text-decoration: none; transition: color 0.3s;
     }
     .nav-links a:hover { color: var(--gray-900); }
     .nav-cta {
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--white); background: var(--gray-900);
-      padding: 0.65rem 1.5rem; text-decoration: none; transition: background 0.3s;
+      padding: 0.8rem 1.8rem; text-decoration: none; transition: background 0.3s;
     }
     .nav-cta:hover { background: var(--cool-dark); }
 
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
-      display: grid; grid-template-columns: 55% 45%;
+      display: flex; align-items: center;
       padding-top: 72px;
+      background: var(--cream);
     }
     .hero-left {
       display: flex; flex-direction: column; justify-content: center;
-      padding: 7rem 5rem 7rem 7rem;
-      background: var(--cream);
+      padding: 7rem 10rem 7rem 7rem;
+      max-width: 860px;
     }
     .hero-eyebrow {
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 400;
-      letter-spacing: 0.18em; text-transform: uppercase;
+      font-size: 0.95rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--cool-gray); margin-bottom: 2.5rem;
     }
     .hero-title {
@@ -95,58 +97,47 @@
       color: var(--gray-900); margin-bottom: 3.5rem;
     }
     .hero-title em { font-style: italic; color: var(--cool-dark); }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-actions {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      align-items: center;
+    }
     .btn-primary {
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--white); background: var(--gray-900);
-      padding: 0.9rem 2rem; text-decoration: none; transition: background 0.3s;
+      padding: 1.1rem 2.2rem; text-decoration: none; transition: background 0.3s;
+      display: inline-flex; align-items: center;
     }
     .btn-primary:hover { background: var(--cool-dark); }
-    .btn-ghost {
+    .hero-phone {
+      display: inline-flex; align-items: center; gap: 0.5rem;
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 400;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gray-600); text-decoration: none;
-      border-bottom: 1px solid var(--gray-300); padding-bottom: 2px;
-      transition: color 0.25s, border-color 0.25s;
+      font-size: 1rem; font-weight: 400;
+      color: var(--gray-700); text-decoration: none;
+      transition: color 0.2s;
     }
+    .hero-phone:hover { color: var(--gray-900); }
+    .hero-phone svg { width: 18px; height: 18px; flex-shrink: 0; }
     .btn-ghost:hover { color: var(--gray-900); border-color: var(--gray-700); }
 
     .hero-right {
       background: var(--cool-bg);
       display: flex; flex-direction: column;
-      justify-content: flex-end; padding: 5rem 4rem;
+      justify-content: center; align-items: center;
+      padding: 5rem 4rem;
       border-left: 1px solid var(--cool-light);
       position: relative;
     }
-    .hero-tag {
-      position: absolute; top: 3rem; left: 0;
-      background: var(--gray-900); padding: 0.55rem 1.4rem;
+    .hero-right-placeholder {
+      width: 100%; max-width: 340px; aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--cool-light) 0%, var(--cool-bg) 100%);
+      display: flex; align-items: center; justify-content: center;
     }
-    .hero-tag p {
-      font-family: var(--sans);
-      font-size: 0.58rem; font-weight: 400;
-      letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-400);
-    }
-    .hero-stats { display: flex; flex-direction: column; gap: 2rem; }
-    .hero-stat { border-top: 1px solid var(--cool-light); padding-top: 1.4rem; }
-    .hero-stat-label {
-      font-family: var(--sans);
-      font-size: 0.58rem; font-weight: 400;
+    .hero-right-placeholder p {
+      font-size: 0.62rem; font-weight: 400;
       letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--gray-400); margin-bottom: 0.4rem;
-    }
-    .hero-stat-value {
-      font-family: var(--serif);
-      font-size: 1.2rem; font-weight: 400;
-      color: var(--gray-800); line-height: 1.2;
-    }
-    .hero-stat-sub {
-      font-family: var(--sans);
-      font-size: 0.68rem; font-weight: 300;
-      color: var(--gray-500); margin-top: 0.2rem;
+      color: var(--cool-mid);
     }
 
     /* ── CONTAINER ── */
@@ -176,30 +167,41 @@
 
     .medicos-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0; border: 1px solid var(--gray-200);
+      gap: 2.5rem; border: none;
     }
     .medico-card {
-      padding: 3.5rem;
-      transition: background 0.3s;
-      border-right: 1px solid var(--gray-200);
+      padding: 0;
+      transition: box-shadow 0.3s;
+      border: 1px solid var(--gray-200);
     }
-    .medico-card:last-child { border-right: none; }
-    .medico-card:hover { background: var(--cream); }
+    .medico-card:hover { box-shadow: 0 6px 32px rgba(0,0,0,0.07); }
+
+    .medico-photo {
+      width: 100%; aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--cool-bg) 0%, var(--cool-light) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .medico-photo p {
+      font-size: 0.62rem; font-weight: 400;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--cool-mid);
+    }
+    .medico-body { padding: 2.5rem; }
 
     .medico-nome {
       font-family: var(--serif);
-      font-size: 1.8rem; font-weight: 400;
-      color: var(--gray-900); margin-bottom: 0.2rem; line-height: 1.1;
+      font-size: 2.2rem; font-weight: 400;
+      color: var(--gray-900); margin-bottom: 0.3rem; line-height: 1.1;
     }
     .medico-subtitulo {
       font-family: var(--sans);
-      font-size: 0.62rem; font-weight: 400;
+      font-size: 0.82rem; font-weight: 400;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--cool-gray); margin-bottom: 0.5rem;
     }
     .medico-crm {
       font-family: var(--sans);
-      font-size: 0.6rem; font-weight: 400;
+      font-size: 0.78rem; font-weight: 400;
       letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--gray-400); margin-bottom: 2.5rem;
       padding-bottom: 2rem; border-bottom: 1px solid var(--gray-200);
@@ -214,54 +216,64 @@
     .formacao-body strong {
       display: block;
       font-family: var(--sans);
-      font-size: 0.78rem; font-weight: 500;
-      color: var(--gray-800); margin-bottom: 0.1rem;
+      font-size: 0.95rem; font-weight: 500;
+      color: var(--gray-800); margin-bottom: 0.15rem;
     }
     .formacao-body span {
       font-family: var(--sans);
-      font-size: 0.74rem; font-weight: 300;
+      font-size: 0.88rem; font-weight: 300;
       color: var(--gray-500); line-height: 1.5;
     }
     .medico-sbd {
       font-family: var(--sans);
-      font-size: 0.6rem; font-weight: 400;
+      font-size: 0.75rem; font-weight: 400;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--gray-400); padding-top: 1.5rem; border-top: 1px solid var(--gray-200);
+      margin-bottom: 1rem;
     }
+    .medico-linkedin {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--sans);
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cool-mid); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .medico-linkedin:hover { color: var(--cool-dark); }
 
     /* ── ESPECIALIDADES ── */
-    .especialidades { background: var(--cool-bg); }
+    .especialidades { background: var(--white); }
     .espec-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-top: 0;
+      gap: 2rem; margin-top: 0;
     }
     .espec-card {
-      background: var(--white);
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(255,255,255,0.8);
-      box-shadow: 0 2px 16px rgba(74,90,102,0.06);
-      transition: box-shadow 0.3s, transform 0.3s;
+      background: var(--gray-100);
+      padding: 3.5rem 2.8rem;
+      border: 1px solid var(--gray-200);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s, background 0.3s;
     }
     .espec-card:hover {
-      box-shadow: 0 8px 32px rgba(74,90,102,0.12);
-      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      background: var(--white);
     }
     .espec-num {
       font-family: var(--sans);
-      font-size: 0.58rem; font-weight: 400;
+      font-size: 0.75rem; font-weight: 400;
       letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--cool-light); margin-bottom: 1.2rem;
+      color: var(--cool-light); margin-bottom: 1.5rem;
     }
     .espec-title {
       font-family: var(--serif);
-      font-size: 1.5rem; font-weight: 400;
-      color: var(--gray-900); margin-bottom: 1rem; line-height: 1.15;
+      font-size: 2rem; font-weight: 400;
+      color: var(--gray-900); margin-bottom: 1.2rem; line-height: 1.15;
     }
     .espec-title em { font-style: italic; }
-    .espec-divider { width: 2rem; height: 1px; background: var(--cool-light); margin-bottom: 1rem; }
+    .espec-divider { width: 2.5rem; height: 1px; background: var(--cool-light); margin-bottom: 1.2rem; }
     .espec-desc {
       font-family: var(--sans);
-      font-size: 0.8rem; font-weight: 300;
+      font-size: 0.92rem; font-weight: 300;
       line-height: 1.85; color: var(--gray-500);
     }
 
@@ -297,11 +309,23 @@
     .agendamento .section-title { margin-bottom: 1.5rem; }
     .agendamento-body {
       font-family: var(--sans);
-      font-size: 0.86rem; font-weight: 300;
+      font-size: 0.92rem; font-weight: 300;
       line-height: 1.85; color: var(--gray-500);
       max-width: 460px; margin: 0 auto 3rem;
     }
-    .agendar-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .agendar-row {
+      display: flex; gap: 1.5rem; justify-content: center;
+      flex-wrap: wrap; align-items: center;
+    }
+    .agendar-phone {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--sans);
+      font-size: 1.1rem; font-weight: 400;
+      color: var(--gray-700); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .agendar-phone:hover { color: var(--gray-900); }
+    .agendar-phone svg { width: 18px; height: 18px; stroke: var(--gray-500); }
 
     /* ── FOOTER ── */
     footer { background: var(--gray-900); padding: 4.5rem 0 2.5rem; }
@@ -375,14 +399,16 @@
       .footer-legal { text-align: left; }
     }
   </style>
+
 </head>
 <body>
 
   <!-- NAV -->
+
   <nav>
     <a href="#" class="nav-logo">Mota Dermatologia</a>
     <ul class="nav-links">
-      <li><a href="#medicos">Médicos</a></li>
+      <li><a href="#medicos">Corpo Clínico</a></li>
       <li><a href="#especialidades">Especialidades</a></li>
       <li><a href="#localizacao">Localização</a></li>
       <li><a href="#agendamento">Agendamento</a></li>
@@ -391,6 +417,7 @@
   </nav>
 
   <!-- HERO -->
+
   <section class="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">Dermatologia clínica · cirúrgica · cosmiatria</p>
@@ -401,119 +428,133 @@
       </h1>
       <div class="hero-actions">
         <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar via WhatsApp</a>
-        <a href="tel:1130836371" class="btn-ghost">(11) 3083-6371</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-tag"><p>Clínica Fira · São Paulo</p></div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <p class="hero-stat-label">Atendimento</p>
-          <p class="hero-stat-value">Segunda a sexta</p>
-          <p class="hero-stat-sub">09h00 às 18h00</p>
-        </div>
-        <div class="hero-stat">
-          <p class="hero-stat-label">Localização</p>
-          <p class="hero-stat-value">Cerqueira César</p>
-          <p class="hero-stat-sub">R. Haddock Lobo, 131 — Cj. 1106</p>
-        </div>
-        <div class="hero-stat">
-          <p class="hero-stat-label">Formação</p>
-          <p class="hero-stat-value">HC · USP</p>
-          <p class="hero-stat-sub">Membros titulares da SBD</p>
-        </div>
+        <a href="tel:1130836371" class="hero-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          (11) 3083-6371
+        </a>
       </div>
     </div>
   </section>
 
   <!-- MÉDICOS -->
+
   <section class="medicos" id="medicos">
     <div class="container">
       <p class="section-eyebrow">Quem somos</p>
       <h2 class="section-title">Conheça os <em>especialistas</em></h2>
       <div class="medicos-grid">
 
-        <!-- FELIPE -->
-        <div class="medico-card">
-          <p class="medico-nome">Dr. Felipe Mota Soares</p>
-          <p class="medico-subtitulo">Dermatologista · MSc</p>
-          <p class="medico-crm">CRM-SP 167.511</p>
-          <ul class="formacao-list">
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Graduação em Medicina</strong>
-                <span>EMESCAM — Santa Casa de Misericórdia de Vitória (2008–2013)</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Residência em Dermatologia</strong>
-                <span>Complexo Hospitalar Padre Bento de Guarulhos — SUS/SP (2014–2016)</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Especialização em Dermatologia</strong>
-                <span>Hospital das Clínicas — FMUSP (2017)</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Mestrado em Dermatologia</strong>
-                <span>Faculdade de Medicina — Universidade de São Paulo (2026)</span>
-              </div>
-            </li>
-          </ul>
-          <p class="medico-sbd">Membro titular — Sociedade Brasileira de Dermatologia</p>
-        </div>
-
-        <!-- MATEUS -->
-        <div class="medico-card">
-          <p class="medico-nome">Dr. Mateus Mota Soares</p>
-          <p class="medico-subtitulo">Dermatologista · MSc · Cosmiatria e Laser</p>
-          <p class="medico-crm">CRM-SP 188.343</p>
-          <ul class="formacao-list">
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Graduação em Medicina</strong>
-                <span>EMESCAM — Santa Casa de Misericórdia de Vitória (2008–2013)</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Residência em Dermatologia</strong>
-                <span>Hospital Federal de Bom Sucesso — SES-RIO</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Especialização em Cosmiatria e Laser</strong>
-                <span>Hospital das Clínicas — FMUSP (2017)</span>
-              </div>
-            </li>
-            <li class="formacao-item">
-              <span class="formacao-dot"></span>
-              <div class="formacao-body">
-                <strong>Mestrado em Dermatologia</strong>
-                <span>Faculdade de Medicina — Universidade de São Paulo (2025)</span>
-              </div>
-            </li>
-          </ul>
-          <p class="medico-sbd">Membro titular — Sociedade Brasileira de Dermatologia</p>
-        </div>
-
+```
+    <!-- FELIPE -->
+    <div class="medico-card">
+      <div class="medico-photo"><p>Foto Dr. Felipe</p></div>
+      <div class="medico-body">
+      <p class="medico-nome">Dr. Felipe Mota Soares</p>
+      <p class="medico-subtitulo">Dermatologista · MSc</p>
+      <p class="medico-crm">CRM-SP 167.511</p>
+      <ul class="formacao-list">
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Graduação em Medicina</strong>
+            <span>EMESCAM — Santa Casa de Misericórdia de Vitória (2008–2013)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Residência em Dermatologia</strong>
+            <span>Complexo Hospitalar Padre Bento de Guarulhos — SUS/SP (2014–2016)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Especialização em Cosmiatria e Laser</strong>
+            <span>Hospital das Clínicas — FMUSP (2017)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Mestrado em Dermatologia</strong>
+            <span>Faculdade de Medicina — Universidade de São Paulo (2026)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Pós-graduação em Administração de Empresas</strong>
+            <span>Fundação Getulio Vargas — FGV (2018–2019)</span>
+          </div>
+        </li>
+      </ul>
+      <p class="medico-sbd">Membro titular — Sociedade Brasileira de Dermatologia</p>
+      <a href="https://www.linkedin.com/in/felipe-mota-soares" target="_blank" class="medico-linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
       </div>
     </div>
+
+    <!-- MATEUS -->
+    <div class="medico-card">
+      <div class="medico-photo"><p>Foto Dr. Matheus</p></div>
+      <div class="medico-body">
+      <p class="medico-nome">Dr. Matheus Mota Soares</p>
+      <p class="medico-subtitulo">Dermatologista · MSc</p>
+      <p class="medico-crm">CRM-SP 188.343</p>
+      <ul class="formacao-list">
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Graduação em Medicina</strong>
+            <span>EMESCAM — Santa Casa de Misericórdia de Vitória (2008–2013)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Residência em Dermatologia</strong>
+            <span>Hospital Federal de Bom Sucesso — SES-RIO</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Especialização em Cosmiatria e Laser</strong>
+            <span>Hospital das Clínicas — FMUSP (2017)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Mestrado em Dermatologia</strong>
+            <span>Faculdade de Medicina — Universidade de São Paulo (2025)</span>
+          </div>
+        </li>
+        <li class="formacao-item">
+          <span class="formacao-dot"></span>
+          <div class="formacao-body">
+            <strong>Pós-graduação em Administração de Empresas</strong>
+            <span>Fundação Getulio Vargas — FGV (2018–2019)</span>
+          </div>
+        </li>
+      </ul>
+      <p class="medico-sbd">Membro titular — Sociedade Brasileira de Dermatologia</p>
+      <a href="https://www.linkedin.com/in/matheus-mota-soares-md-msc-ba16371a8" target="_blank" class="medico-linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      </div>
+    </div>
+</div>
+```
+
   </section>
 
   <!-- ESPECIALIDADES -->
+
   <section class="especialidades" id="especialidades">
     <div class="container">
       <p class="section-eyebrow">Áreas de atuação</p>
@@ -523,25 +564,26 @@
           <p class="espec-num">01</p>
           <h3 class="espec-title">Dermatologia <em>clínica</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Diagnóstico e tratamento de doenças da pele, cabelos, unhas e mucosas. Dermatoscopia, biópsias e acompanhamento de condições como psoríase, acne, eczema, vitiligo e dermatites.</p>
+          <p class="espec-desc">Diagnóstico e tratamento de doenças da pele. Dermatoscopia, biópsias e acompanhamento de condições como psoríase, acne, eczema e vitiligo.</p>
         </div>
         <div class="espec-card">
           <p class="espec-num">02</p>
           <h3 class="espec-title">Dermatologia <em>cirúrgica</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Remoção de lesões benignas e malignas, cirurgia para cânceres de pele, exérese de cistos e lipomas, correção de unhas encravadas e biópsias diagnósticas com precisão técnica.</p>
+          <p class="espec-desc">Remoção de lesões benignas e malignas, exérese de cistos e lipomas e biópsias diagnósticas com precisão técnica.</p>
         </div>
         <div class="espec-card">
           <p class="espec-num">03</p>
           <h3 class="espec-title"><em>Cosmiatria</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Tratamentos estéticos com respaldo médico: toxina botulínica, preenchimentos, peelings, laser, bioestimuladores de colágeno, microagulhamento e fotoproteção personalizada.</p>
+          <p class="espec-desc">Tratamentos estéticos com respaldo médico: toxina botulínica, preenchimentos, peelings, laser, bioestimuladores de colágeno e microagulhamento.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- LOCALIZAÇÃO -->
+
   <section class="localizacao" id="localizacao">
     <div class="container">
       <p class="section-eyebrow">Onde atendemos</p>
@@ -563,16 +605,12 @@
               <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">WhatsApp: (11) 94263-6446</a>
             </p>
           </div>
-          <div>
-            <p class="loc-label">Acesso</p>
-            <p class="loc-value" style="font-size:0.8rem;">Próximo à Av. Paulista e aos principais hospitais de São Paulo. Fácil acesso por transporte público e aplicativos.</p>
-          </div>
         </div>
         <div class="loc-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2!2d-46.6630!3d-23.5560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575b2c61ca49%3A0x4e5a7ef9e5a7ef9e!2sR.%20Haddock%20Lobo%2C%20131%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.098!2d-46.6558!3d-23.5618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce576a7c0b0001%3A0x1!2sR.%20Haddock%20Lobo%2C%20131%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001414-001!5e0!3m2!1spt-BR!2sbr!4v1714000000000"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Clínica Fira">
+            title="Clínica Fira — R. Haddock Lobo, 131, Cerqueira César, São Paulo">
           </iframe>
         </div>
       </div>
@@ -580,19 +618,24 @@
   </section>
 
   <!-- AGENDAMENTO -->
+
   <section class="agendamento" id="agendamento">
     <div class="container">
       <p class="section-eyebrow">Agendar consulta</p>
-      <h2 class="section-title">Pronto para cuidar<br>da <em>sua pele?</em></h2>
-      <p class="agendamento-body">Atendemos de segunda a sexta, das 9h às 18h, na Clínica Fira em Cerqueira César. Entre em contato pelo WhatsApp ou telefone.</p>
+      <h2 class="section-title" style="font-size: clamp(2.5rem, 4vw, 3.8rem);">Agendar <em>consulta</em></h2>
+      <p class="agendamento-body">Atendimento de segunda a sexta, das 9h às 18h.<br>Agendamento por WhatsApp ou telefone.</p>
       <div class="agendar-row">
         <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar via WhatsApp</a>
-        <a href="tel:1130836371" class="btn-ghost">(11) 3083-6371</a>
+        <a href="tel:1130836371" class="agendar-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          (11) 3083-6371
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
+
   <footer>
     <div class="container">
       <div class="footer-top">
@@ -601,10 +644,10 @@
           <p class="footer-tagline">Clínica · Cirúrgica · Cosmiatria</p>
         </div>
         <div class="footer-col">
-          <p class="footer-col-title">Médicos</p>
+          <p class="footer-col-title">Corpo Clínico</p>
           <p>Dr. Felipe Mota Soares</p>
           <p>CRM-SP 167.511</p>
-          <p style="margin-top:0.6rem;">Dr. Mateus Mota Soares</p>
+          <p style="margin-top:0.6rem;">Dr. Matheus Mota Soares</p>
           <p>CRM-SP 188.343</p>
         </div>
         <div class="footer-col">
