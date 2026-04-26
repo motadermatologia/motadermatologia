@@ -387,7 +387,7 @@
     .hero-actions { animation: fadeUp 0.7s ease 0.35s both; }
 
     /* ── MOBILE ── */
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
@@ -397,6 +397,7 @@
       section { padding: 5rem 0; }
       .medicos-grid { flex-direction: column; }
       .medico-card { width: 100%; }
+      .medico-nome { font-size: 1.6rem; }
       .espec-grid { grid-template-columns: 1fr; }
       .loc-grid { grid-template-columns: 1fr; }
       .loc-info { border-right: none; border-bottom: 1px solid var(--gray-200); }
@@ -448,11 +449,36 @@
     <div class="container">
       <p class="section-eyebrow">Quem somos</p>
       <h2 class="section-title">Conheça os <em>especialistas</em></h2>
-      <div style="display:flex; flex-direction:row; gap:2rem; align-items:stretch; width:100%;">
+      <div id="medicos-grid">
+      <style>
+        #medicos-grid {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          align-items: stretch;
+          width: 100%;
+        }
+        #medicos-grid > div {
+          flex: 1;
+          min-width: 0;
+          border: 1px solid #e8e8e8;
+          display: flex;
+          flex-direction: column;
+        }
+        @media (max-width: 768px) {
+          #medicos-grid {
+            flex-direction: column !important;
+          }
+          #medicos-grid > div {
+            width: 100% !important;
+            flex: none !important;
+          }
+        }
+      </style>
 
 ```
     <!-- FELIPE -->
-    <div style="flex:1; min-width:0; border:1px solid #e8e8e8; display:flex; flex-direction:column;">
+    <div>
       <div class="medico-photo">
         <img src="foto-felipe.jpeg" alt="Dr. Felipe Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
@@ -506,7 +532,7 @@
     </div>
 
     <!-- MATHEUS -->
-    <div style="flex:1; min-width:0; border:1px solid #e8e8e8; display:flex; flex-direction:column;">
+    <div>
       <div class="medico-photo">
         <img src="foto-matheus.jpeg" alt="Dr. Matheus Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
