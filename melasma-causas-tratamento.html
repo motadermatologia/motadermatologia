@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Entenda o que causa o melasma, por que ele é uma condição crônica e recorrente, e quais são as abordagens de tratamento com respaldo científico." />
+  <meta property="og:title" content="Melasma: causas e tratamento — Mota Dermatologia" />
+  <meta property="og:description" content="O que causa o melasma e como ele é tratado na prática clínica." />
+  <meta property="og:type" content="article" />
+  <title>Melasma: causas e tratamento — Blog Mota Dermatologia</title>
+
+  <style>
+    :root {
+      --cool-bg:    #e8ecef;
+      --cool-light: #c8cfd5;
+      --cool-gray:  #9098A0;
+      --cool-mid:   #6B7A86;
+      --cool-dark:  #4A5A66;
+      --gray-100:   #f5f5f5;
+      --gray-200:   #e8e8e8;
+      --gray-300:   #d0d0d0;
+      --gray-400:   #aaaaaa;
+      --gray-500:   #888888;
+      --gray-600:   #666666;
+      --gray-700:   #444444;
+      --gray-800:   #2e2e2e;
+      --gray-900:   #1a1a1a;
+      --white:      #ffffff;
+      --cream:      #f8f7f4;
+      --serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --sans:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); font-weight: 300; background: var(--white); color: var(--gray-800); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem; background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200);
+    }
+    .nav-logo { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gray-900); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gray-900); }
+    .nav-cta { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--gray-900); padding: 0.8rem 1.8rem; text-decoration: none; transition: background 0.3s; }
+    .nav-cta:hover { background: var(--cool-dark); }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 3rem; }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero { background: var(--cream); padding: 150px 0 3.5rem; }
+    .article-cat {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--cool-dark); margin-bottom: 1.2rem; display: block;
+    }
+    .article-title {
+      font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300;
+      line-height: 1.18; color: var(--gray-900); margin-bottom: 1.5rem;
+    }
+    .article-title em { font-style: italic; color: var(--cool-dark); }
+    .article-meta {
+      display: flex; gap: 1.2rem; align-items: center;
+      font-size: 0.78rem; color: var(--gray-500); flex-wrap: wrap;
+    }
+    .article-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gray-400); }
+
+    .article-cover {
+      width: 100%; aspect-ratio: 21/9;
+      background: linear-gradient(135deg, var(--cool-dark) 0%, var(--cool-mid) 55%, var(--cool-light) 100%);
+      margin: 3rem 0 3.5rem;
+      position: relative; overflow: hidden;
+    }
+    .article-cover svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+    /* ── ARTICLE BODY ── */
+    .article-body { padding-bottom: 5rem; }
+    .article-body p {
+      font-size: 1.02rem; font-weight: 300; line-height: 1.9; color: var(--gray-700);
+      margin-bottom: 1.6rem;
+    }
+    .article-body h2 {
+      font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--gray-900);
+      margin: 3rem 0 1.2rem; line-height: 1.3;
+    }
+    .article-body h3 {
+      font-size: 0.95rem; font-weight: 500; color: var(--gray-800);
+      letter-spacing: 0.02em; margin: 2rem 0 0.8rem;
+    }
+    .article-body ul, .article-body ol { margin: 0 0 1.6rem 1.3rem; }
+    .article-body li {
+      font-size: 1.02rem; font-weight: 300; line-height: 1.85; color: var(--gray-700); margin-bottom: 0.6rem;
+    }
+    .article-body strong { font-weight: 500; color: var(--gray-900); }
+    .article-pullquote {
+      border-left: 2px solid var(--cool-dark);
+      padding: 0.3rem 0 0.3rem 1.8rem; margin: 2.8rem 0;
+      font-family: var(--serif); font-size: 1.3rem; font-weight: 300; font-style: italic;
+      color: var(--cool-dark); line-height: 1.5;
+    }
+    .article-divider { width: 2.5rem; height: 1px; background: var(--cool-light); margin: 3rem 0; }
+
+    .article-authors {
+      display: flex; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--gray-200);
+      margin-top: 3rem; flex-wrap: wrap;
+    }
+    .article-author-name { font-size: 0.85rem; font-weight: 500; color: var(--gray-800); }
+    .article-author-role { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.2rem; }
+
+    .article-disclaimer {
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      padding: 1.6rem 2rem; margin-top: 2rem;
+      font-size: 0.8rem; color: var(--gray-500); line-height: 1.7;
+    }
+
+    .article-cta {
+      background: var(--cream); text-align: center; padding: 4rem 0; margin-top: 4rem;
+    }
+    .article-cta h3 {
+      font-family: var(--serif); font-size: 1.7rem; font-weight: 300; color: var(--gray-900); margin-bottom: 1rem;
+    }
+    .article-cta p { font-size: 0.92rem; color: var(--gray-500); margin-bottom: 2rem; }
+    .btn-primary {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); background: var(--gray-900); padding: 1.1rem 2.2rem; text-decoration: none;
+      transition: background 0.3s; display: inline-flex; align-items: center;
+    }
+    .btn-primary:hover { background: var(--cool-dark); }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cool-mid); text-decoration: none; margin-bottom: 2rem;
+    }
+    .back-link:hover { color: var(--cool-dark); }
+
+    footer { background: var(--gray-900); padding: 4.5rem 0 2.5rem; }
+    .footer-container { max-width: 1160px; margin: 0 auto; padding: 0 3rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-brand { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); margin-bottom: 0.6rem; }
+    .footer-tagline { font-size: 0.6rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); }
+    .footer-col-title { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 1.2rem; }
+    .footer-col p, .footer-col a { display: block; font-size: 0.78rem; font-weight: 300; color: var(--gray-500); text-decoration: none; margin-bottom: 0.5rem; line-height: 1.7; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--cool-light); }
+    .footer-bottom { padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1160px; margin: 0 auto; padding-left: 3rem; padding-right: 3rem; }
+    .footer-copy { font-size: 0.66rem; font-weight: 300; color: var(--gray-600); }
+    .footer-legal { font-size: 0.62rem; font-weight: 300; color: var(--gray-700); max-width: 420px; text-align: right; }
+
+    @media (max-width: 1024px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .container { padding: 0 1.5rem; }
+      .article-hero { padding: 120px 0 2.5rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; }
+      .footer-legal { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Mota Dermatologia</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#medicos">Corpo Clínico</a></li>
+      <li><a href="../index.html#ciencia">Produção Científica</a></li>
+      <li><a href="../index.html#especialidades">Especialidades</a></li>
+      <li><a href="../index.html#localizacao">Localização</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="nav-cta">Agendar consulta</a>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <a href="../blog.html" class="back-link">← Voltar ao blog</a>
+      <span class="article-cat">Dermatologia Clínica</span>
+      <h1 class="article-title">Melasma: <em>causas e tratamento</em></h1>
+      <div class="article-meta">
+        <span>Dr. Matheus Mota Soares</span>
+        <span class="dot"></span>
+        <span>7 min de leitura</span>
+        <span class="dot"></span>
+        <span>Julho de 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="article-cover">
+      <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice">
+        <ellipse cx="220" cy="120" rx="90" ry="55" fill="#f8f7f4" opacity="0.28"/>
+        <ellipse cx="560" cy="200" rx="120" ry="70" fill="#f8f7f4" opacity="0.22"/>
+        <ellipse cx="420" cy="80" rx="60" ry="40" fill="#f8f7f4" opacity="0.32"/>
+        <ellipse cx="680" cy="90" rx="45" ry="30" fill="#f8f7f4" opacity="0.25"/>
+        <ellipse cx="120" cy="250" rx="70" ry="45" fill="#f8f7f4" opacity="0.2"/>
+      </svg>
+    </div>
+
+    <article class="article-body">
+      <p>O melasma é uma das queixas mais frequentes em consultórios de dermatologia — e também uma das mais frustrantes para quem convive com ele. Isso acontece porque o melasma não tem uma "cura" no sentido tradicional: é uma condição crônica, com tendência a recorrer, que exige controle contínuo em vez de um tratamento único e definitivo. Entender esse ponto muda completamente a forma como se lida com ele.</p>
+
+      <h2>O que é o melasma</h2>
+      <p>Melasma é uma hipermelanose adquirida — ou seja, um aumento localizado na produção de melanina — que se manifesta como manchas acastanhadas, geralmente simétricas, nas regiões do rosto mais expostas ao sol: bochechas, testa, buço e queixo. Ele afeta desproporcionalmente mulheres e é mais comum em fototipos intermediários a altos, com forte componente genético: ter um familiar próximo com melasma aumenta consideravelmente a chance de desenvolvê-lo.</p>
+
+      <h2>Por que ele aparece</h2>
+      <p>O melasma tem origem multifatorial, e três elementos aparecem repetidamente na literatura como gatilhos principais:</p>
+      <ul>
+        <li><strong>Radiação ultravioleta e luz visível</strong> — o principal fator desencadeante e também o principal fator de piora. Mesmo exposições breves e repetidas sustentam a atividade dos melanócitos;</li>
+        <li><strong>Hormônios</strong> — gravidez, uso de anticoncepcionais e terapias hormonais estão associados ao início ou agravamento do quadro, o que explica por que o melasma é por vezes chamado popularmente de "pano da gravidez";</li>
+        <li><strong>Predisposição genética</strong> — determina a sensibilidade individual dos melanócitos aos estímulos acima.</li>
+      </ul>
+      <p>Esses fatores explicam por que o melasma tende a piorar no verão, durante a gestação, ou com o uso de determinados medicamentos hormonais — e por que ele pode retornar mesmo após um período de melhora significativa.</p>
+
+      <div class="article-pullquote">Tratar o melasma sem controlar a exposição solar é como tentar esvaziar uma banheira sem fechar a torneira.</div>
+
+      <h2>Como é feito o tratamento</h2>
+      <p>O tratamento do melasma é sempre multimodal — combina diferentes frentes de ação, ajustadas ao caso e reavaliadas ao longo do tempo:</p>
+      <h3>Fotoproteção rigorosa</h3>
+      <p>É o pilar não negociável de qualquer protocolo. Sem fotoproteção consistente — incluindo proteção contra luz visível em casos mais resistentes — qualquer outro tratamento tem eficácia limitada e o risco de recidiva é alto.</p>
+      <h3>Agentes clareadores tópicos</h3>
+      <p>Substâncias como ácido tranexâmico tópico, ácido azelaico, niacinamida e derivados de hidroquinona (sob prescrição e acompanhamento médico) atuam reduzindo a produção e a transferência de melanina, com diferentes perfis de eficácia e tolerância.</p>
+      <h3>Procedimentos em consultório</h3>
+      <p>Peelings químicos superficiais a médios, quando bem indicados, aceleram a renovação celular e auxiliam na uniformização do tom da pele. Tratamentos a laser exigem avaliação cuidadosa, pois alguns protocolos mal indicados podem paradoxalmente piorar o melasma — a escolha da tecnologia e dos parâmetros é decisiva.</p>
+      <h3>Ácido tranexâmico oral</h3>
+      <p>Em casos selecionados e sob avaliação médica individualizada, o uso oral pode ser considerado como parte do protocolo, sempre pesando histórico de saúde e contraindicações.</p>
+
+      <h2>Expectativa realista: controle, não eliminação</h2>
+      <p>Um dos pontos mais importantes na consulta é alinhar expectativas. O objetivo do tratamento é reduzir significativamente a visibilidade das manchas e manter esse resultado — não prometer uma pele "sem nenhum traço" de forma permanente. Pacientes que entendem o melasma como uma condição a ser controlada, com manutenção contínua de fotoproteção e eventual retoque de tratamento, tendem a ter resultados mais satisfatórios e duradouros do que quem busca uma solução única.</p>
+
+      <div class="article-divider"></div>
+
+      <p>Se você tem manchas faciais e quer entender qual abordagem faz sentido para o seu caso, agende uma avaliação dermatológica na Clínica Fira.</p>
+    </article>
+
+    <div class="article-authors">
+      <div>
+        <p class="article-author-name">Dr. Matheus Mota Soares</p>
+        <p class="article-author-role">CRM-SP 188.343 · RQE 65431</p>
+      </div>
+      <div>
+        <p class="article-author-name">Dr. Felipe Mota Soares</p>
+        <p class="article-author-role">CRM-SP 167.511 · RQE 65419</p>
+      </div>
+    </div>
+
+    <div class="article-disclaimer">
+      Este conteúdo tem caráter informativo e educacional, não substituindo consulta médica presencial. Cada pele tem necessidades específicas — a indicação de fotoproteção deve ser individualizada por um dermatologista.
+    </div>
+  </div>
+
+  <section class="article-cta">
+    <div class="container">
+      <h3>Quer uma avaliação <em style="font-style:italic;color:var(--cool-dark);">personalizada</em>?</h3>
+      <p>Agende uma consulta na Clínica Fira, Cerqueira César.</p>
+      <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar via WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Mota Dermatologia</p>
+          <p class="footer-tagline">Clínica · Cirúrgica · Cosmiatria</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Corpo Clínico</p>
+          <p><a href="https://www.linkedin.com/in/felipe-mota-soares" target="_blank" style="color:inherit;">Dr. Felipe Mota Soares</a></p>
+          <p>CRM-SP 167.511 · RQE 65419</p>
+          <p style="margin-top:0.6rem;"><a href="https://www.linkedin.com/in/matheus-mota-soares-md-msc-ba16371a8" target="_blank" style="color:inherit;">Dr. Matheus Mota Soares</a></p>
+          <p>CRM-SP 188.343 · RQE 65431</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <a href="tel:1130836371">(11) 3083-6371</a>
+          <a href="https://api.whatsapp.com/send?phone=5511942636446" target="_blank">WhatsApp (11) 94263-6446</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Endereço</p>
+          <p>R. Haddock Lobo, 131, Cj. 1106</p>
+          <p>Cerqueira César — SP</p>
+          <p style="margin-top:0.5rem;">Seg–Sex · 9h às 18h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Mota Dermatologia. Todos os direitos reservados.</p>
+        <p class="footer-legal">As informações deste site têm caráter informativo e não substituem consulta médica presencial.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
