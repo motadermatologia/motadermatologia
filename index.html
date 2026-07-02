@@ -254,6 +254,57 @@
     }
     .medico-linkedin:hover { color: var(--cool-dark); }
 
+    /* ── PRODUÇÃO CIENTÍFICA ── */
+    .ciencia { background: var(--gray-100); }
+    .ciencia-intro {
+      font-family: var(--sans);
+      font-size: 0.92rem; font-weight: 300;
+      line-height: 1.85; color: var(--gray-500);
+      max-width: 640px; margin-bottom: 3rem;
+    }
+    .ciencia-table-wrap {
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      overflow: hidden;
+    }
+    table.ciencia-table { width: 100%; border-collapse: collapse; }
+    .ciencia-table thead th {
+      font-family: var(--sans);
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--cool-gray); text-align: left;
+      padding: 1rem 1.5rem; border-bottom: 1px solid var(--gray-200);
+      background: var(--gray-100);
+    }
+    .ciencia-table td {
+      font-family: var(--sans);
+      font-size: 0.86rem; font-weight: 300;
+      color: var(--gray-700); line-height: 1.5;
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      vertical-align: top;
+    }
+    .ciencia-table td.ciencia-ano { color: var(--gray-400); white-space: nowrap; width: 4.5rem; }
+    .ciencia-table td.ciencia-congresso { color: var(--cool-dark); white-space: nowrap; width: 13rem; }
+    .ciencia-table tbody tr:last-child td { border-bottom: none; }
+    .ciencia-row-extra { display: none; }
+    .ciencia-row-extra.is-visible { display: table-row; }
+    .ciencia-toggle-wrap { text-align: center; margin-top: 2.5rem; }
+    .ciencia-toggle {
+      font-family: var(--sans);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cool-dark); background: none;
+      border: 1px solid var(--cool-dark);
+      padding: 1rem 2.2rem; cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .ciencia-toggle:hover { background: var(--cool-dark); color: var(--white); }
+    @media (max-width: 768px) {
+      .ciencia-table td.ciencia-congresso { display: none; }
+      .ciencia-table thead th:nth-child(2) { display: none; }
+    }
+
     /* ── ESPECIALIDADES ── */
     .especialidades { background: var(--white); }
     .espec-grid {
@@ -423,9 +474,11 @@
     <a href="#" class="nav-logo">Mota Dermatologia</a>
     <ul class="nav-links">
       <li><a href="#medicos">Corpo Clínico</a></li>
+      <li><a href="#ciencia">Produção Científica</a></li>
       <li><a href="#especialidades">Especialidades</a></li>
       <li><a href="#localizacao">Localização</a></li>
       <li><a href="#agendamento">Agendamento</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
     <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="nav-cta">Agendar consulta</a>
   </nav>
@@ -436,9 +489,9 @@
     <div class="hero-left">
       <p class="hero-eyebrow">Dermatologia clínica · cirúrgica · cosmiatria</p>
       <h1 class="hero-title">
-        Cuidado dermatológico<br>
-        especializado, com <em>excelência</em><br>
-        e precisão médica
+        Dermatologia baseada<br>
+        em <em>ciência</em>, conduzida com<br>
+        precisão e individualidade
       </h1>
       <div class="hero-actions">
         <a href="https://api.whatsapp.com/send?phone=5511942636446&text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar via WhatsApp</a>
@@ -487,12 +540,12 @@
     <!-- FELIPE -->
     <div>
       <div class="medico-photo">
-        <img src="foto-felipe.jpeg" alt="Dr. Felipe Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="foto-felipe-v2.jpeg" alt="Dr. Felipe Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="medico-body" style="flex:1;">
       <p class="medico-nome">Dr. Felipe Mota Soares</p>
       <p class="medico-subtitulo">Dermatologista · MSc</p>
-      <p class="medico-crm">CRM-SP 167.511</p>
+      <p class="medico-crm">CRM-SP 167.511 · RQE 65419</p>
       <ul class="formacao-list">
         <li class="formacao-item">
           <span class="formacao-dot"></span>
@@ -541,12 +594,12 @@
     <!-- MATHEUS -->
     <div>
       <div class="medico-photo">
-        <img src="foto-matheus.jpeg" alt="Dr. Matheus Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="foto-matheus-v2.jpeg" alt="Dr. Matheus Mota Soares" style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="medico-body" style="flex:1;">
       <p class="medico-nome">Dr. Matheus Mota Soares</p>
       <p class="medico-subtitulo">Dermatologista · MSc</p>
-      <p class="medico-crm">CRM-SP 188.343</p>
+      <p class="medico-crm">CRM-SP 188.343 · RQE 65431</p>
       <ul class="formacao-list">
         <li class="formacao-item">
           <span class="formacao-dot"></span>
@@ -598,6 +651,255 @@
 
   </section>
 
+  <!-- PRODUÇÃO CIENTÍFICA -->
+
+  <section class="ciencia" id="ciencia">
+    <div class="container">
+      <p class="section-eyebrow">Publicações</p>
+      <h2 class="section-title">Produção <em>científica</em></h2>
+      <p class="ciencia-intro">Trabalhos científicos apresentados em congressos internacionais, como AAD, EADV, IFSCC e World Congress of Dermatology.</p>
+      <div class="ciencia-table-wrap">
+        <table class="ciencia-table">
+          <thead>
+            <tr>
+              <th>Ano</th>
+              <th>Congresso</th>
+              <th>Trabalho científico</th>
+            </tr>
+          </thead>
+          <tbody id="ciencia-tbody">
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>Novel Topical Formulation Combats Pollution-Induced Skin Aging by Improving Hydration and Barrier Function</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>Assessing the Photoprotective Efficacy of Stick Sunscreen: Single vs. Double-Layer Application</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>Stability and Clinical Efficacy of a Vitamin C, Caffeine, and Turmeric Stick for Periocular Aging</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>A Promising Oral Strategy for Hair Strength: Collagen VII Upregulation and Clinical Improvement in Hair Resistance</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">EADV Symposium</td>
+              <td>Efficacy of a Nighttime Topical Formula with Pro-Collagen Peptides to Improve Skin Repair and Reduce Signs of Aging</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">EADV Symposium</td>
+              <td>Peptides, Caffeine, and Jasminum sambac for Periocular Rejuvenation</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2026</td>
+              <td class="ciencia-congresso">EADV Symposium</td>
+              <td>Multimodal Assessment of a Topical Antioxidant Formula in Reducing Oxidative Stress and Signs of Skin Aging</td>
+            </tr>
+            <tr>
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Symposium</td>
+              <td>Reduction of Wrinkles and Expression Lines with a Novel Combination of Natural Retinol-Like Ingredients</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Symposium</td>
+              <td>Development of an SPF 99 Sunscreen that Preserves DNA Integrity and Combats Skin Aging Through P53 Activation</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">International Congress of Dermatology</td>
+              <td>The Combination of Hyaluronic Acid and Polyglutamic Acid Slows Cellular Aging and Reduces Signs of Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">International Congress of Dermatology</td>
+              <td>Anti-Aging Efficacy of a Formula Rich in Pro-Collagen Peptides</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>A Formula Containing Retinaldehyde, Taurine, and Centella asiatica Shows Greater Potential for Stimulating Cell Renewal Than Tretinoin</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Evaluating Cleansing Efficacy: Development and Evaluation of a Renewing Antioxidant Cleansing Gel</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Proven Benefits of Ascorbic Acid Derivatives: Beyond Stability</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Calcium Hydroxyapatite as a Strategy to Enhance Sunscreen SPF</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Solid Sunscreens: Challenges in Development and Manufacturing</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2025</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>The Combination of Hyaluronic Acid and Polyglutamic Acid Slows Cellular Aging and Reduces Signs of Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>An Effective Multimodal Dermocosmetic Approach for the Treatment of Melasma</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>High-Concentration Niacinamide and Astaxanthin Association Improves Skin Firmness</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>A Hyaluronic Acid-Based Formula with Polyglutamic Acid Improves Skin Condition and Prevents Cellular Senescence</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Association of a Vitamin C Derivative with Adaptogens as a Clean Alternative for Treating Signs of Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>A Renewing Serum Combining Bakuchiol and Adaptogens Improves Skin Condition</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">IFSCC Congress</td>
+              <td>Calcium Hydroxyapatite as a Strategy to Enhance Sunscreen SPF</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">IFSCC Congress</td>
+              <td>Evaluating Cleansing Efficacy: Development and Assessment of an Antioxidant Renewing Cleanser</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">IFSCC Congress</td>
+              <td>Solid Sunscreens: Challenges in Development and Manufacturing</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">IFSCC Congress</td>
+              <td>Solid Vitamin C Derivative Cosmeceutical for Photoaging: Development Challenges and Clinical Efficacy</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2024</td>
+              <td class="ciencia-congresso">IFSCC Congress</td>
+              <td>Proven Benefits of Ascorbic Acid Derivatives: Beyond Stability</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2023</td>
+              <td class="ciencia-congresso">World Congress of Dermatology</td>
+              <td>Efficacy of a Novel Vitamin C and Hyaluronic Acid Serum in Improving Skin Photoaging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2023</td>
+              <td class="ciencia-congresso">World Congress of Dermatology</td>
+              <td>Solid Hyaluronic Acid Concentrate with Anti-Aging Effects</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2023</td>
+              <td class="ciencia-congresso">World Congress of Dermatology</td>
+              <td>Vitamin C Improves Skin Condition: A Continuing Challenge for Oily Skin</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2023</td>
+              <td class="ciencia-congresso">World Congress of Dermatology</td>
+              <td>Hyaluronic Acid and Peptide-Rich Formula for Lip Augmentation</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2023</td>
+              <td class="ciencia-congresso">World Congress of Dermatology</td>
+              <td>Combination of Different Molecular Weights of Hyaluronic Acid Reduces Dermal Signs of Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2022</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Bakuchiol and Niacinamide: A Safe Association to Improve Skin Aging Compared with Retinol</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2021</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Efficacy and Safety of a Superficial Daily Chemical Peel in Improving Overall Skin Appearance Through Clinical, Instrumental, and Subjective Evaluation</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2021</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Topical Application of a Peptide-Rich Formula Improves Skin Firmness and Elasticity</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2021</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>SPF 50 Sunscreen Capable of Reducing Excessive Sebum Excretion</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2021</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Waglerin-1–Like Tripeptide-Rich Serum in the Treatment of Skin Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2020</td>
+              <td class="ciencia-congresso">AAD Annual Meeting / JAAD</td>
+              <td>Efficacy of an SPF 70 Sunscreen in Protecting the Skin Against Visible Light and Air Pollution</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2020</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Dermo-Cosmetic Formula Containing Hyaluronic Acid in Different Molecular Weights Visibly Improves Signs of Skin Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2020</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>A Whitening Composition Demonstrates Efficacy in the Treatment of Facial Hyperpigmentation and Melasma</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2019</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>SPF 70 Sunscreen Improves Global Skin Condition in Subjects with Moderate to Severe Facial Hyperpigmentation</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2019</td>
+              <td class="ciencia-congresso">Skin of Color Update</td>
+              <td>Stick Sunscreen SPF 70 Improves Global Skin Condition and Hyperpigmentation in Skin of Color</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2018</td>
+              <td class="ciencia-congresso">AAD Annual Meeting</td>
+              <td>Reflectance Confocal Microscopy and Image Analysis to Evaluate the Efficacy of a Topical Facial Serum with 20% Vitamin C in Improving Signs of Aging</td>
+            </tr>
+            <tr class="ciencia-row-extra">
+              <td class="ciencia-ano">2018</td>
+              <td class="ciencia-congresso">EADV Congress</td>
+              <td>Daily Use of a Facial Anti-Pollution Sunscreen Improves Clinical Signs of Photoaging</td>
+            </tr>          </tbody>
+        </table>
+      </div>
+      <div class="ciencia-toggle-wrap">
+        <button type="button" class="ciencia-toggle" id="ciencia-toggle-btn" onclick="
+          document.querySelectorAll('.ciencia-row-extra').forEach(function(row){ row.classList.toggle('is-visible'); });
+          var expanded = document.querySelector('.ciencia-row-extra').classList.contains('is-visible');
+          this.textContent = expanded ? 'Ver menos' : 'Ver produção científica completa';
+        ">Ver produção científica completa</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ESPECIALIDADES -->
 
   <section class="especialidades" id="especialidades">
@@ -609,19 +911,19 @@
           <p class="espec-num">01</p>
           <h3 class="espec-title">Dermatologia <em>clínica</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Diagnóstico e tratamento de doenças da pele. Dermatoscopia, biópsias e acompanhamento de condições como psoríase, acne, eczema e vitiligo.</p>
+          <p class="espec-desc">Diagnóstico e tratamento de doenças da pele, com realização de dermatoscopia, biópsias e acompanhamento de condições como acne, eczema, dermatite atópica, melasma, rosácea, psoríase e vitiligo.</p>
         </div>
         <div class="espec-card">
           <p class="espec-num">02</p>
           <h3 class="espec-title">Dermatologia <em>cirúrgica</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Remoção de lesões benignas e malignas, exérese de cistos e lipomas e biópsias diagnósticas com precisão técnica.</p>
+          <p class="espec-desc">Cirurgia dermatológica para remoção de pintas, tratamento do câncer de pele, exérese de cistos e lipomas e realização de biópsias para diagnóstico preciso. Também realizamos procedimentos como crioterapia, cauterização e curetagem para o tratamento de diferentes lesões da pele.</p>
         </div>
         <div class="espec-card">
           <p class="espec-num">03</p>
           <h3 class="espec-title"><em>Cosmiatria</em></h3>
           <div class="espec-divider"></div>
-          <p class="espec-desc">Tratamentos estéticos com respaldo médico: toxina botulínica, preenchimentos, peelings, laser, bioestimuladores de colágeno e microagulhamento.</p>
+          <p class="espec-desc">Realizamos tratamentos estéticos com respaldo médico, incluindo toxina botulínica, preenchimentos, bioestimuladores de colágeno, peelings, microagulhamento, ultrassom microfocado e tecnologias a laser, sempre com foco em resultados naturais e seguros.</p>
         </div>
       </div>
     </div>
@@ -687,9 +989,9 @@
         <div class="footer-col">
           <p class="footer-col-title">Corpo Clínico</p>
           <p><a href="https://www.linkedin.com/in/felipe-mota-soares" target="_blank" style="color:inherit;text-decoration:none;">Dr. Felipe Mota Soares</a></p>
-          <p>CRM-SP 167.511</p>
+          <p>CRM-SP 167.511 · RQE 65419</p>
           <p style="margin-top:0.6rem;"><a href="https://www.linkedin.com/in/matheus-mota-soares-md-msc-ba16371a8" target="_blank" style="color:inherit;text-decoration:none;">Dr. Matheus Mota Soares</a></p>
-          <p>CRM-SP 188.343</p>
+          <p>CRM-SP 188.343 · RQE 65431</p>
         </div>
         <div class="footer-col">
           <p class="footer-col-title">Contato</p>
